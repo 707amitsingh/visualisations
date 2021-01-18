@@ -1,0 +1,7 @@
+.relationalGraphToolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #efefef;
+    padding: 20px;
+    margin-top: 10px
+}
