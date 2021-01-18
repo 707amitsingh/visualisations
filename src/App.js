@@ -13,9 +13,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header onSubmit={handleSearchSubmit}/>
+      <Header onSubmit={handleSearchSubmit} />
       <Breadcrum />
-     <RelationalGraph data={nodesMockData} config={graphConfig}/>
+      <div style={{ display: 'flex' }}>
+        <RelationalGraph data={nodesMockData} config={graphConfig} />
+      </div>
     </div>
   );
 }

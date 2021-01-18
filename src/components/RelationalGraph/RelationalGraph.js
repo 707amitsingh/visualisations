@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { Graph } from "react-d3-graph";
+import data2 from '../../MockData/mockData2'
 import './RelationalGraph.css'
 
 
 const RelationalGraph = ({ data, config }) => {
 
-    const [gravity, setGravity] = useState(-500)
+    const [gravity, setGravity] = useState(-350)
     const [dotSize, setDotSize] = useState(600)
-    const [fontSize, setFontSize] = useState(10)
+    const [fontSize, setFontSize] = useState(12)
+    const [changeData, setChnageData] = useState(false)
     const [windowSize, setWindowSize] = useState(window.innerWidth)
 
     const onClickNode = function (nodeId) {
@@ -21,6 +23,10 @@ const RelationalGraph = ({ data, config }) => {
 
     const handleResize = () => {
         setWindowSize(window.innerWidth)
+    }
+
+    const handleChangeData = () => {
+        setChnageData(changeData => !changeData)
     }
 
     useEffect(() => {
@@ -39,7 +45,7 @@ const RelationalGraph = ({ data, config }) => {
         <div className="">
             <Graph
                 id="graph-id" // id is mandatory
-                data={data}
+                data={changeData ? data2 : data}
                 config={config}
                 onClickNode={onClickNode}
                 onClickLink={onClickLink}
@@ -48,22 +54,25 @@ const RelationalGraph = ({ data, config }) => {
                 <div className="toolbarButtons">
                     <span className="mr-sm-2">Zoom</span>
                     <ButtonGroup className="mr-sm-4">
-                        <Button variant="primary" onClick={() => setGravity(gravity - 50)}>+</Button>
-                        <Button variant="secondary" onClick={() => setGravity(gravity + 50)}>-</Button>
+                        <Button variant="info" onClick={() => setGravity(gravity - 50)}>+</Button>
+                        <Button variant="dark" onClick={() => setGravity(gravity + 50)}>-</Button>
                     </ButtonGroup>
 
                     <span className="mr-sm-2">Dot Size</span>
                     <ButtonGroup className="mr-sm-4">
-                        <Button variant="primary" onClick={() => setDotSize(dotSize + 100)}>+</Button>
-                        <Button variant="secondary" onClick={() => setDotSize(dotSize - 100)}>-</Button>
+                        <Button variant="info" onClick={() => setDotSize(dotSize + 100)}>+</Button>
+                        <Button variant="dark" onClick={() => setDotSize(dotSize - 100)}>-</Button>
                     </ButtonGroup>
 
                     <span className="mr-sm-2">Font Size</span>
-                    <ButtonGroup>
-                        <Button variant="primary" onClick={() => setFontSize(fontSize + 2)}>+</Button>
-                        <Button variant="secondary" onClick={() => setFontSize(fontSize - 2)}>-</Button>
+                    <ButtonGroup className="mr-sm-4">
+                        <Button variant="info" onClick={() => setFontSize(fontSize + 2)}>+</Button>
+                        <Button variant="dark" onClick={() => setFontSize(fontSize - 2)}>-</Button>
                     </ButtonGroup>
                 </div>
+                <Button onClick={handleChangeData}>
+                    Change data
+                </Button>
             </div>
         </div>
 

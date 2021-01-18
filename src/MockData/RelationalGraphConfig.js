@@ -33,7 +33,7 @@ const myConfig = {
       "highlightFontWeight": "bold",
       "highlightStrokeColor": "red",
       "highlightStrokeWidth": 2,
-      "mouseCursor": "crosshair",
+      "mouseCursor": "pointer",
       "opacity": 0.9,
       "renderLabel": true,
       "size": 600,
