@@ -70,8 +70,8 @@ const RelationalGraph = ({ data, config }) => {
                         <Button variant="dark" onClick={() => setFontSize(fontSize - 2)}>-</Button>
                     </ButtonGroup>
                 </div>
-                <Button onClick={handleChangeData}>
-                    Change data
+                <Button variant="outline-info" onClick={handleChangeData}>
+                    Change data(temp)
                 </Button>
             </div>
         </div>
