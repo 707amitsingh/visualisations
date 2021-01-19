@@ -5,7 +5,9 @@ import nodesMockData from './MockData/mockData1'
 import RelationalGraph from './components/RelationalGraph/RelationalGraph'
 import Breadcrum from './components/BreadCrum/Breadcrum';
 import transformGraphData from './Utils/graphDataTransformation'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
+import SpaceDetail  from './components/SpaceDetail/SpaceDetail'
+import spaceData from './MockData/spaceData';
 
 function App() {
 
@@ -35,7 +37,8 @@ function App() {
       <Header onSubmit={handleSearchSubmit} />
       <Breadcrum />
       <div style={{ display: 'flex' }}>
-        <RelationalGraph data={graphData} config={graphConfig} onNodeCountSelect={onNodeCountSelect} />
+        <SpaceDetail  data={spaceData}></SpaceDetail>
+        {/* <RelationalGraph data={graphData} config={graphConfig} onNodeCountSelect={onNodeCountSelect} /> */}
       </div>
     </div>
   );
