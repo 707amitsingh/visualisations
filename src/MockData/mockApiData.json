@@ -1,35 +1,230 @@
 {
-    "name": "GF_L02_CAM17",
-    "type": "iot.SpatialElement",
-    "id": "Y3VzdG9tZXIuU2VjdXJpdHlab25l-aW90LlNwYXRpYWxFbGVtZW50-c29tLmd1aWQ=-Y3VzdG9tZXIuaTJmMzU3NzkyLTRiODYtNDM4Zi04Yzc5LThhZTg1ZDZhNjJiYg==",
+    "name": "EM_SiteMeter1_MSSB",
+    "type": "iot.Asset",
+    "id": "aGNiLWh2YWMuQ2hpbGxlcg==-aW90LkFzc2V0-c29tLmd1aWQ=-ZjhkYzhiOTQtZmYxOC00Y2I3LTk0N2ItZWIwZWNhNDY2NDQw",
     "customerId": "idf0a29149-660a-4493-bba1-f3ffa4388078",
     "relationships": [
         {
-            "id": "iot.SUPPLIES_SPATIAL_ELEMENT",
-            "name": "iot.SUPPLIES_SPATIAL_ELEMENT",
-            "direction": "IN",
+            "id": "iot.IS_LOCATED_IN",
+            "name": "iot.IS_LOCATED_IN",
+            "direction": "OUT",
             "relationshipEntityList": [
                 {
-                    "name": "1011",
-                    "type": "iot.Asset",
-                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaWNlNDAyZjllLWViMzctNGVjMi05N2JjLWI2NTY5OTk4NmY0ZQ=="
-                },
-                {
-                    "name": "1012",
-                    "type": "iot.Asset",
-                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaTIwNjhkN2Q1LTAxMjMtNGFiYy04OTg2LWIzZDNhYTg2NmU3MQ=="
+                    "name": "Meters",
+                    "type": "iot.SpatialElement",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZTMyZmI3OTYtNWUxMC00OGU5LTlhN2EtMmZmODMxY2ZlY2Q5"
                 }
             ]
         },
         {
-            "id": "iot.IS_CONTAINED_BY_SPATIAL_ELEMENT",
-            "name": "iot.IS_CONTAINED_BY_SPATIAL_ELEMENT",
+            "id": "iot.SUPPLIES_ASSET",
+            "name": "iot.SUPPLIES_ASSET",
             "direction": "OUT",
             "relationshipEntityList": [
                 {
-                    "name": "sTGqccentre01_OBS2019.2.1.3",
-                    "type": "iot.SpatialElement",
-                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaTUzYWI3NzMyLWY1ZTktNDM0Mi05M2JlLTUwNjkyY2UyZWRlMQ=="
+                    "name": "EM_MSSB_31",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjI1Y2U4M2EtYzhiMi00M2NiLThjMGYtMDA1ZjZlMzhhZDdm"
+                },
+                {
+                    "name": "EM_MSSB_39",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NjIwYTQzMWItYTgxNy00NzY2LWJmMTYtNWI0N2I0ZWYzMzA5"
+                },
+                {
+                    "name": "EM_MSSB_62",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Zjc1YzNjYTQtNjNjNi00ODdlLThmZjEtN2I2ZmNjNzljZjA1"
+                },
+                {
+                    "name": "EM_MSSB_38",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZTRiMzU1ZDgtNzlmNS00YTVhLTkzNzAtYTc2ZjRmMTE2Zjg5"
+                },
+                {
+                    "name": "EM_MSSB_34",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-M2NjYjQ5M2EtY2FiZS00NjE3LTkwZjEtNjY5OWFkN2Y4ZTJj"
+                },
+                {
+                    "name": "EM_MSSB_23",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Mzc1MTMzMGUtMjI3MC00N2M4LWFiYzctMmY5NzZlOWFhMTkx"
+                },
+                {
+                    "name": "EM_MSSB_29",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjdhYWQzNGItN2I2NS00YWI0LWFiM2UtNTEwNThjMmEwNDIw"
+                },
+                {
+                    "name": "EM_MSSB_35",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZDg2NmExOWQtNWM4Yy00MTFiLWEyMjEtYzk3MGI4MWY5YTNk"
+                },
+                {
+                    "name": "EM_MSSB_22",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YmJlMWQyNmUtYjM2YS00OWE2LWIxN2ItYTU3MGNmZjBiMjIw"
+                },
+                {
+                    "name": "EM_MSSB_32",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZjliMmQyYjQtMDQzOS00ZWVhLWJlYzQtNDVkZWQ3MTFkYTY5"
+                },
+                {
+                    "name": "EM_MSSB_58",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MmU4ZWFkMjUtM2VmYy00ZjE3LWFlZDEtYjg5MDE5M2JlYjhl"
+                },
+                {
+                    "name": "EM_MSSB_33",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ODBlMDIxZDktODVjOS00ZTlkLWJiOGQtNGNkNGE5MjExMDM5"
+                },
+                {
+                    "name": "EM_MSSB_30",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjIwYzYwNjUtNjI4MC00ODEyLWFlOTQtNWQ4NDZkNWY5OTA3"
+                },
+                {
+                    "name": "EM_MSSB_47",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTY1OTQ2MjQtOTUzOS00YWFiLWEzY2QtMzA0NTdmOGQwMDFk"
+                },
+                {
+                    "name": "EM_MSSB_26",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MGIzN2RkYTgtNjIzMC00YTQyLWIxMWUtZDVlOTVmYmI2ZDMw"
+                },
+                {
+                    "name": "EM_MSSB_44",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmZiODJlMmEtZTQwNi00OGRjLThhNmItOGM2ZjQwYzVjMGQ4"
+                },
+                {
+                    "name": "EM_MSSB_56",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZDA3NDg4ODQtMmQ3NC00OTAzLTgzZjItY2YwOTY3MjUwNTUx"
+                },
+                {
+                    "name": "EM_MSSB_57",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YjczNzhmYjItNTcxMi00Yzc0LTg2NTUtZTliZDgxYmE0ODI1"
+                },
+                {
+                    "name": "EM_MSSB_50",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTc0YjUwNzEtNTM1OS00MWVkLTgxMzEtNjU2NTZhYjU3MGYx"
+                },
+                {
+                    "name": "EM_MSSB_36",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmQwMDQ5MmItOTNhZi00ZjAzLTkyOTQtYzE1ZWFlNjEyN2M4"
+                },
+                {
+                    "name": "EM_MSSB_27",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NGVmZjc3YTgtMWNjMy00YTIzLTlmNTEtYjNlNGE1NmIwYWRi"
+                },
+                {
+                    "name": "EM_MSSB_28",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzY2MDQ2YzMtNGM3NC00MzQzLThmMjQtZmNmMmJmZDdmMGJm"
+                },
+                {
+                    "name": "EM_MSSB_52",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZjVjMzRlYmMtNzRlOS00MzUwLWExZDMtZjgzZWRhOGNhMjYz"
+                },
+                {
+                    "name": "EM_MSSB_45",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MDVhNmMyM2QtNWFmNi00ZmQyLTg4ZDgtYWRkMjFmY2QwZTMy"
+                },
+                {
+                    "name": "EM_MSSB_59",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTc5MzJiYTMtMTA4Yi00YTc4LWJlMzItODczMTk5MmYyZWMx"
+                },
+                {
+                    "name": "EM_MSSB_24",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NGZiNDhmZjMtYzY5OC00MmZjLWI1NjUtOWE2NzM5MTM2NDI1"
+                },
+                {
+                    "name": "EM_MSSB_42",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDRmZGM1YTUtOWM0YS00NmI1LWE1YTctYjM4MWVhZDE0NzYw"
+                },
+                {
+                    "name": "EM_MSSB_53",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmIxMGI2YTctZWQ1MS00ZTU4LTk2NTUtMTZkZDYzMGVjYThh"
+                },
+                {
+                    "name": "EM_MSSB_54",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MDM3YTQwN2UtZjE4OC00MWUyLWI2MTgtZWJlZGZhZjE0YTBk"
+                },
+                {
+                    "name": "EM_MSSB_46",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTRhZTEwMDctNzU1Zi00ZTRjLTk4YTAtZTMyMmQyZDFkNTJh"
+                },
+                {
+                    "name": "EM_MSSB_41",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjYyMjA2NWQtOWNlYy00NDM3LWE1MjMtYzgzYjQ1MWQzODEy"
+                },
+                {
+                    "name": "EM_MSSB_37",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Mjk4ZmUzYjEtMDRkMS00ZGE0LWEyOGYtYWU5ZWQ3OWJmMDE2"
+                },
+                {
+                    "name": "EM_MSSB_25",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NzIwMmIxMDEtM2ViZS00Nzk4LWE1MDAtZjJlNTYwYjVkM2Uy"
+                },
+                {
+                    "name": "EM_MSSB_40",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZGFlMTI1ZmUtZTZkOS00OTQ0LTgzZDMtNGZhMTBiM2Y1ZWQ3"
+                },
+                {
+                    "name": "EM_MSSB_51",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDUyOTdlN2YtNDAzOS00MmJhLWE2ZTEtMTRlMGFmZjkwYTlk"
+                },
+                {
+                    "name": "EM_MSSB_60",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZTQ5MWMyZDQtNWUwMS00NzRkLTlkYzctZTAwYTAxOGE2MTM3"
+                },
+                {
+                    "name": "EM_MSSB_61",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NWM0ZjI5ZTAtMjdjZC00YjZhLTlkNTctMWQwYTUxZWI1NDMx"
+                },
+                {
+                    "name": "EM_MSSB_48",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YzgxOWQ0NWItNDQxZC00NzNjLWI2MjEtN2U1MDIyY2EzYTE1"
+                },
+                {
+                    "name": "EM_MSSB_43",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmE1YmJlYmUtZWQ0NC00OTNhLWExMzYtMTM5ZjEyNTBhMjk2"
+                },
+                {
+                    "name": "EM_MSSB_55",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MGVhMGE2MDctNjhlNy00MGIxLWE5NjQtNWI0OWI0OWJiOGEz"
+                },
+                {
+                    "name": "EM_MSSB_49",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Nzg2N2UwYjItYTRlYi00Zjg4LTg0YzMtZWY3NGY5OWEwMDk0"
                 }
             ]
         }
