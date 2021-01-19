@@ -1,24 +1,21 @@
 import React, { useState } from 'react'
 import { ButtonGroup, Button, DropdownButton, Dropdown } from 'react-bootstrap'
 
-const Toolbar = ({ setGravity, setDotSize, setFontSize, onNodeCountSelect, size = '200px' }) => {
-    const [nodesCount, setNodesCount] = useState(0)
+const Toolbar = ({ filters, setGravity, setDotSize, setFontSize, onNodeFilterSelect, size = '200px' }) => {
+    const [currentFilter, setCurrentFilter] = useState(0)
 
     const handleNodeCountSelect = (value) => {
-        setNodesCount(+value ? +value : 'all')
-        onNodeCountSelect(+value)
+        setCurrentFilter(value)
+        onNodeFilterSelect(value)
     }
     return <div className="relationalGraphToolbar" style={{ width: size }}>
         <div className="toolbarButtonContainer">
-            <p className="mr-sm-2">Number of Nodes</p>
-            <DropdownButton className="mb-sm-4" id="dropdown-basic-button" title={nodesCount ? `Nodes: ${nodesCount}` : "Node count "} variant="primary" onSelect={handleNodeCountSelect} >
-                <Dropdown.Item eventKey="10">10 nodes</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item eventKey="15">15 nodes</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item eventKey="20">20 nodes</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item eventKey="0">All nodes</Dropdown.Item>
+            <p className="mr-sm-2">Type Filter</p>
+            <DropdownButton className="mb-sm-4" id="dropdown-basic-button" title={currentFilter ? currentFilter : "Filter "} variant="primary" onSelect={handleNodeCountSelect} >
+                {[...filters.map((filter, i) => <div key={filter}>
+                    <Dropdown.Item eventKey={filter}>{filter}</Dropdown.Item>
+                    <Dropdown.Divider />
+                    </div>), <Dropdown.Item eventKey='No filter'>NO FILTER</Dropdown.Item>]}
             </DropdownButton>
             <p className="mr-sm-2">Zoom</p>
             <ButtonGroup className="mb-sm-4">

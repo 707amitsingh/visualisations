@@ -15,21 +15,21 @@ const transformGraphData = (rawData) => {
                 data.relationships.forEach(entity => {
                         let entityNodes = []
                         if(!filterData.includes(entity.id)){
-                            filterData.push(entity.id)
+                            filterData.push(entity.id.split('.')[1])
                         }
                         const entityLinks = entity.relationshipEntityList.map(relation => {
-                            
                             const link = {
                                 id: relation.id,
                                 source: entity.direction === 'OUT' ? parentNodeName : relation.name, // node's Id
                                 target: entity.direction === 'OUT' ? relation.name : parentNodeName,
-                                type: relation.type,
-                                label: entity.name
+                                type: entity.id,
+                                label: relation.type
                             }
                             const node = {
                                 id: relation.name,
                                 level: 2,
-                                label: relation.id
+                                label: relation.id,
+                                type: entity.id
                             }
                             entityNodes = [...entityNodes, node]
                             return link
