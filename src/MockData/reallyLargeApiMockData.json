@@ -1,0 +1,630 @@
+{
+    "name": "Gallery of Modern Art",
+    "type": "iot.SpatialElement",
+    "id": "aW90LlNwYXRpYWxFbGVtZW50-aW90LlNwYXRpYWxFbGVtZW50-c29tLmd1aWQ=-YTkyYTY4NWEtN2M5Mi00ZTM0LThjMmYtNGQwNDYwMWJmZGJl",
+    "customerId": "idf0a29149-660a-4493-bba1-f3ffa4388078",
+    "assetType": null,
+    "points": null,
+    "relationships": [
+        {
+            "id": "iot.IS_CONTAINED_BY_SPATIAL_ELEMENT",
+            "name": "iot.IS_CONTAINED_BY_SPATIAL_ELEMENT",
+            "direction": "OUT",
+            "relationshipEntityList": [
+                {
+                    "name": "sTGqccentre01_OBS2019.2.1.3",
+                    "type": "iot.SpatialElement",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaTUzYWI3NzMyLWY1ZTktNDM0Mi05M2JlLTUwNjkyY2UyZWRlMQ==",
+                    "assetType": null
+                }
+            ]
+        },
+        {
+            "id": "iot.IS_LOCATED_IN",
+            "name": "iot.IS_LOCATED_IN",
+            "direction": "IN",
+            "relationshipEntityList": [
+                {
+                    "name": "GAHU25VAV1_11",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MDE0MzY3OTktN2IyYS00ZDQyLTk3YjktYjIyMGJiM2RlMmNk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU48VAV1_04",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NjkyZDM1ZjItOTkyYy00ZGU4LWJiMzEtYjcxMmI1MzM4ZWU4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU01VAV0_09",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjcwMGE4ZjYtOTQ2Ny00NTkwLWE4ZTktNDhkY2YwMmJmNjM4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_03",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OWFjOGI4ODItNzY0Ny00NTkyLWJmMjctMGQxNjMwYjE3ZDVi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU51VAV4_21",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZGMyYTU5MmUtYWUyNi00NjJmLTkzZTktNWJiMmMwZTc0ZDkw",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU27VAV2_12",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzQ2YmU4ZTItYTc0YS00MjZkLWE0NTMtYmI3NjRhMWE4OGQz",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU43VAV4_26",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YTY3NWFlZmYtYTU1Ny00NzUwLTlhN2ItNTdkYWZhYjJlMTcx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_09",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZWE0OGI5NjctNDVkZS00ZmQ4LWE5ZjYtNzYxZWIyNDY4ZDBj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_02",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YWM0YWJhMWEtYmVmMS00ZjQyLThlYmItOTczZWY1ODA0ZDk4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU48VAV2_01",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzJiYmY1ZjYtNjM3Yi00MWE4LWFkOWItMmNjNjA5OTIxNmM4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV1_05",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmJmNGM0NDItZTdiNC00NDM2LTgyYmQtMzA1YmY1M2YyOWMy",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU25VAV1_10",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Mzk4ZDM4ZjQtNjI4NS00ZjRlLWExZWQtNTk0NDdjMmUwYWU4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV1_07",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTRmMWU5MzAtYjRhYi00ZWIyLTkyMTgtMTY2MmEyNTU1MWY5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU42VAV3_16",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YzM5ODU3OTItYWE0Zi00ZjNjLWIzZmUtYWUwN2VmMmM5MDJk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU38VAV4_23",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzA2ODE0ZjYtOGEwNS00ZmIyLWFkODAtNWM3ZWUzNDg4ODJk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU48VAV1_18",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzkxOWYzZDYtZGZkNS00ZmU5LWI1M2EtYTcwZGUzMGUzNDhk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU38VAV4_25",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ODcwYWIxZDktYzg3MS00Y2Y2LTlmOTUtZGMyOTk4NjNhMTFj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU55",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTk4ZGRmODMtOWFmNi00NmI2LTk5OTgtZWJjYTc3ODQ4NWIx",
+                    "assetType": "Air Handling Unit"
+                },
+                {
+                    "name": "GAHU52VAV4_08",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2IwN2JkNjEtZjM0MC00ZjdhLWJlYWItNWYxYWUxZDMxNzJm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU40VAV3_20",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZDQyYTllODgtYTc0YS00Y2U2LWJlMjAtNDA2YzNhOTgxYzk4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "IAQ0009",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MGQ4NWU4OGEtNWM1Yi00MWQ3LTkwODktZDc0N2ZjMjU3YmM1",
+                    "assetType": "Air Quality Sensor"
+                },
+                {
+                    "name": "GFCU08",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NjJiMGVjMTktMWFiZC00MzY0LWFmNTYtMGI1MDM0Zjk2OTRl",
+                    "assetType": "Air Handling Unit"
+                },
+                {
+                    "name": "GAHU43VAV4_29",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MmI4ZWJiMGEtN2Q0Mi00ZDRiLTkyMzMtMDU0ZTJjY2QzYmJm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_04",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDEzOTZiNDktM2NjZC00YjljLWJhZjUtY2JmYTdjNTU3NzQy",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_01",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDg2ZmJlY2EtOWIyMS00MGZlLWI5MDItMTJjMjY1Zjk0OTc3",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU42VAV1_13",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ODUwZjg0MTQtNTUzZS00MGUyLThlZjktNWYxZmNjMDk2NmVk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU31VAV3_12",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTM5MjQ4ZWMtZTZhMi00ZDE0LWE3ZTEtZTcxMTI0NjFmODc1",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU27VAV2_15",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDliOGRmYjktNTMxMi00NGFiLTg1YzUtMzE2MjVlMWNkNTYx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU48VAV1_01",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MDAwNzFiMTYtODkzMy00NzNhLWE5OGUtY2I3NWVlZTU0MzBi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_01",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTRiYTVmMmQtMzVkNS00N2NkLThkMzAtNDNiMTRiMTk2MTA0",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_04",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDQzYzQ0MGItYjZiMy00NGZjLThmNjYtM2M0ZTcxODJmMzFm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU42VAV1_14",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MTk0ZGUzMWItOThkMS00ZWI5LWI3NjAtNDA2ODdiNTRiMmFk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU01VAV0_03",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTBlMjU2OTQtNzhmZi00NjQxLTkxM2UtY2QwZmViMjVkODZl",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_09",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MWY1ZDE4YmQtMjE4Mi00NmI3LTk0OGUtYzBkZWM1MDM4Zjc1",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "IAQ0007",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2ZlMzA3ZjMtZWY2ZS00OWExLTgwZDUtNDEzZWI3M2QyY2M4",
+                    "assetType": "Air Quality Sensor"
+                },
+                {
+                    "name": "GAHU10VAV0_06",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZjY2MDMzZGUtMTVkZS00YmI1LWE5MmYtNGViMGQzNTE1YmM0",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_03",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmU4MTYyODgtOGJhNC00MmQ3LTgxYjQtYzBjOTg5ZmM1YjAy",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU51VAV4_18",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZmNmZTQ2OWEtN2RhNC00NmQyLTgzNGUtZTg5MWIzYTNlM2Zj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU01VAV0_02",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTA3NjU4OGUtMmQwMi00MzFkLTlkNDktZDZkNWY5MGQ5MWNm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_08",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTU3MTk4YmMtZWI4Yi00Y2YxLWI2OTUtZjYxMWU4ODNmYTJi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU42VAV3_17",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZGE3Y2QyMjYtYzQyNy00NWZlLTlhMzgtODQwYTc2MDI3ZWEx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU43VAV4_27",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZWZiZWMwYTMtZmZkZi00ZWI2LWIwMTctNDUzZmMyM2NmMmNh",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU01VAV0_01",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDk4ZTJiY2QtY2Q3ZS00YjVlLTlhNTgtNDY0ZTYzZjg4NGVi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GEAF18",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OTIwZWIyN2MtODUwMC00NjE3LTk4M2YtM2ZjZmYzZTkzZGI2",
+                    "assetType": "Air Handling Unit"
+                },
+                {
+                    "name": "GAHU10VAV3_07",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTY3Y2ExMWEtOWUwZC00Nzc2LWEzY2QtZWQ0MjFhZjVhNjBi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU31VAV3_13",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Yzc4ODg0MGItMjNkYy00Y2ZkLTgzOTEtNmI4Y2FiYzk5NzYw",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU41VAV1_17",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTE4MGJkMWUtOTJiMC00MTg2LThhN2UtODNkYTcxYTQ1NTIy",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV1_09",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Nzk2M2RiMTYtYTY3ZC00ZWUxLThhZjEtOTFlNTZkNjY2ZDQ4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU27VAV2_13",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZjBhMWNiMTktNjA0MC00ZTcxLTk3M2MtY2FlOGZhMWU5M2Jj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_03",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZGE4ZmJjYzUtOTI2OS00MjAyLWJhMmQtNGVmYzc1ZjZmNzhm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU38VAV4_24",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MWI4MDNlOTEtNzVhYS00NGNkLWFhMDEtMzI5MWY1ZGZlMzhi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GPAC05",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjA1OTg0MDQtYjFmMS00MDNkLTg2MTEtZGVkYTc2YWZhNTYx",
+                    "assetType": "Air Handling Unit"
+                },
+                {
+                    "name": "GAHU31VAV3_14",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjUwM2VmYWItNGM5YS00Njk4LTk0NDQtNjExMTMxNWE5MDVi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_11",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NmVmYWU5N2QtNmE4OS00OWJlLTk4YjEtNzIwNmY0MjllYzU5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU01VAV0_04",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDkyYmI4YTAtNTk4OC00YzhhLWE2Y2YtZGM4YzgxMmM5NzJm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU32",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZTAzMTJmZTQtNTQyZi00NzM4LWE2YjgtNzEzZmYxNzg3ZDFm",
+                    "assetType": "Air Handling Unit"
+                },
+                {
+                    "name": "GAHU52VAV4_05",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2E2ODNjYWItZGFkMy00ZGQ5LWI1ZDQtMTNhOTFjMzMzZGU0",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "IAQ0010",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTI1ODU2OTQtMTg4My00MDU1LWE0YmMtMTFmNmJiZGFjYTBm",
+                    "assetType": "Air Quality Sensor"
+                },
+                {
+                    "name": "GAHU10VAV0_07",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MTRiMmNjOWYtMDZjNi00Y2JmLTgzMzMtYzc1MzY0ZDRkZDFh",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU51VAV4_20",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-M2VhOTUwOGMtZjEzOS00ZTg2LWE5ZmMtYWViNjhkNTNmN2Qx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU48VAV1_02",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YzRlNGFjZGYtZTVlMi00YmZkLWIxNDQtMDRjNjVhMGFkYzA4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU41VAV3_18",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MWRhZWIyYTEtZDNiZC00OGZmLWFkNmYtNGJjNjYyNzdkZjdj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU43VAV4_17",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZGQzZjdjN2YtOWNlZC00YjcwLWIyYTgtNDNkOTc2ZjAxOWFk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_10",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Njc1YzI2ODctNDAxZi00YjA5LWIxZDEtMTNhZmJmNzM5MGYy",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV0_08",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2E3OTgzYmQtOWZmZi00Y2U4LWE0M2QtZWQ1OWI5NDUwNDg5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU09VAV2_16",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y2Q5ZjNlZjItYzA2Yi00ZGU2LTg0OTctMDM0MWYzZTVjMzlm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU51VAV4_19",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MmI3MzI3NTMtYzFmMC00YjhiLWFiYTQtYzRmM2ExZWQxNjM5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_07",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzE2ZDAzMGEtNzU0OS00ZWZkLTkxNmQtNDdiOGQ4NGFmN2Fj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_06",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZmE4YzI3ZTktZTkxNS00YmFiLWI3YmUtMjUxZTNiZTQwOTdh",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GSAF0",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2FjOTBiNjItOWFjZC00YjEwLTk1MDEtN2JhMTNkMDRiNDg4",
+                    "assetType": "Air Handling Unit"
+                },
+                {
+                    "name": "GAHU09VAV1_19",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjhmNzI2ODctN2YyNS00MjhmLWFlYTgtYzhhNDY1NmEyNzJi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_02",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZDFlNGUxM2YtZjBiOS00YzU4LWEyOTYtYmJjZThmNWRhNDRm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_05",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YzRmNTAwNmItOGFlNi00MTI5LThlMTgtZjE2ZTk1YWE1ZTg5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_04",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZWUwZDE3N2UtMzZhNy00N2E0LThkM2UtNWExZTkzYWQ2ZDk5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_10",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NDg3NGJmYmEtOTc5OS00MzhjLWI1MjEtOGYwMzZmODBmNjE3",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV1_06",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NzMyMmM3ZDItMDAwMS00ZTk0LTljNjYtNzI1MzE4NzM1YjQ4",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU47VAV4_12",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YjZmMzZiNGItZDY3Ny00MWQxLWE5ZTAtYThlNGYzMWQzYmVm",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV1_08",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZmE2YjlhM2QtNWJlZC00ODEwLWI1YzItMGJmMmVjODZkYmYw",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "IAQ0008",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OWExN2VmMDgtZGMzZC00YzAzLWIwZGYtNGNhY2FiYjIxMjNm",
+                    "assetType": "Air Quality Sensor"
+                },
+                {
+                    "name": "GAHU48VAV1_03",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MjkyYTU5MWQtOTliZC00YWI2LTkxMDYtNzM5ZDhiMGE0MTJk",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU43VAV4_16",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZmQ0YTMwMjMtZTUzMS00MDljLTgwODQtMjNlNjdiZGM4YWNi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_06",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NjAzMTU2ZDQtOWQ0NS00YjdlLTgxN2YtMzkzMmI3ZmMwZTYw",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU41VAV1_16",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YjFiOGM0MjMtY2U0Zi00YWI2LWI4YmMtN2U2ZDM1OTdmZTU2",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU43VAV4_28",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-M2U1YjBmYjktNjcxYy00NWIwLWFhYTEtMmI3YTYzM2I4MTc5",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "IAQ0006",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-ZWE2MWExNjgtNGQ4Mi00N2IyLTk0MzAtMWUwYjE2NDUzYmNi",
+                    "assetType": "Air Quality Sensor"
+                },
+                {
+                    "name": "GAHU31VAV3_15",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OGViNGJjZjEtYTgxYS00OTVmLWI4NzAtMzJkOTIzZjNjN2Rj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU40VAV1_15",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MmY1NTJlNGItYzc1Ny00MTE3LTlkODMtMWM2OGE3NDdiZTdi",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_09",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTNhNTA0NWMtNDhlOC00YWM2LTkxNTUtNTE2MmRhZjdmMmIx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU27VAV2_14",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2E5ZTBiMmYtMmE0YS00MzczLThmOTUtYzdiYTEyZTljZDkz",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU31VAV3_11",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YmNmNDk4NTItOTBmNi00YjM2LTlhOTgtNzhiNDdhNTNlY2U3",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU09VAV4_31",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NTBkNmEwNWQtYzY2MS00YzlmLWIyZGQtNTZjNjQxNjc0NTM3",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU40VAV3_19",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YTQ2ZjI4YzctMGEzMS00NWRhLWIzZjEtYzBkYjM4OTc3ZGUx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_02",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NzJhZDJmMWEtYTYxZi00ZmRjLWI5NTAtZmNiNzVhZjVlMjVj",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU47VAV4_13",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-N2IxOTljYmItNzQ1YS00ZTNiLTg2YTAtZGQxODg3ZTViNWZl",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU43VAV4_15",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NzQ3YmEwNTQtNmNiMS00YmYzLWI4OTMtNTkxYTA3YTI1OTAx",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU31VAV3_10",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MDEyNjA4ZDUtYmI5MS00ZDJlLTliY2ItNzUyMGZjNjZhNTk0",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU52VAV4_06",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-OWVhZmIyNGEtNGRkZi00NGI3LTgyMjEtNmY5YjE2MGNmNGJh",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV3_08",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-MzE4MTliNzYtNzllZS00YjY1LWEwYTktMGMxMzFlZDU3Y2E0",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU42VAV0_10",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-YjU2YjhjMjItYzgzOC00ZDA4LTk4MzQtNjFkYWI0MDczMjMw",
+                    "assetType": "Variable Air Volume"
+                },
+                {
+                    "name": "GAHU10VAV2_11",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-NjRmOGU4MWItYmFmYi00NjhhLTk1MGEtZThhYjJlNGZjZTkz",
+                    "assetType": "Variable Air Volume"
+                }
+            ]
+        }
+    ]
+}

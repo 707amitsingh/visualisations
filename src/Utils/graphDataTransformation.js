@@ -1,8 +1,10 @@
 import data from '../MockData/mockApiData.json'
+// import data from '../MockData/reallyLargeApiMockData.json'
 
-const graphData = { nodes: [], links: [] }
 
 const transformGraphData = (childCount) => {
+    console.log('>>>>>>>>>>>>>> CHILD_COUNT: ', childCount)
+    const graphData = { nodes: [], links: [] }
     if (data && data.relationships) {
         const parentNodeName = data.name
         const parentNode = {
@@ -34,6 +36,10 @@ const transformGraphData = (childCount) => {
                 graphData.nodes = [...graphData.nodes, ...entityNodes]
             }
         })
+    }
+    if(childCount < graphData.nodes.length) {
+        graphData.links = graphData.links.filter((_, i) => i < childCount)
+        graphData.nodes = graphData.nodes.filter((_, i) => i <= childCount)
     }
     return graphData
 }

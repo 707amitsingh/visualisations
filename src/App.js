@@ -16,6 +16,14 @@ function App() {
     console.log('>>>>>>>>>>>> SEARCH VALUES: ', queryType, searchValue)
   }
 
+  const onNodeCountSelect = (value) => {
+    if(value && value > 0) {
+      setNodesCount(value)
+    } else {
+      setNodesCount(100000)
+    }
+  }
+
   useEffect(() => {
     const data = transformGraphData(nodesCount)
     console.log('>>>>>>>>>> DATA: ', data)
@@ -27,7 +35,7 @@ function App() {
       <Header onSubmit={handleSearchSubmit} />
       <Breadcrum />
       <div style={{ display: 'flex' }}>
-        <RelationalGraph data={graphData} config={graphConfig} />
+        <RelationalGraph data={graphData} config={graphConfig} onNodeCountSelect={onNodeCountSelect} />
       </div>
     </div>
   );
