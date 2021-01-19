@@ -1,6 +1,6 @@
 const url = "https://dev-cbld-sas-findapi.dev.forge.connected.honeywell.com/v1/search"
-const ApiKey = '' // don't push code with this detail
-const customerId = '' // don't push code with this detail
+const ApiKey = 'HdsXlhBoGZgsifFSOI0mGCCGB4qLw0oxNYxtiZeO' // don't push code with this detail
+const customerId = 'idf0a29149-660a-4493-bba1-f3ffa4388078' // don't push code with this detail
 
 export const getNodes = (data, callBack) => {
 

@@ -1,7 +1,6 @@
 import './App.css';
 import graphConfig from './MockData/RelationalGraphConfig';
 import Header from './components/NavBar/Header'
-import nodesMockData from './MockData/mockApiData.json'
 import RelationalGraph from './components/RelationalGraph/RelationalGraph'
 import Breadcrum from './components/BreadCrum/Breadcrum';
 import transformGraphData from './Utils/graphDataTransformation';
@@ -11,8 +10,9 @@ import EmptyDataScreen from './components/EmptyDataScreen/EmptyDataScreen'
 
 function App() {
 
-  const [nodesCount, setNodesCount] = useState(10000);
+  const [currentFilter, setCurrentFilter] = useState(10000);
   const [graphData, setGraphData] = useState({ nodes: [], links: []})
+  const [filteredData, setFilteredData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [filterCriteria, setFilterCriteria] = useState([])
 
@@ -45,19 +45,16 @@ function App() {
     }
   }
 
-  const onNodeCountSelect = (value) => {
-    if(value && value > 0) {
-      setNodesCount(value)
-    } else {
-      setNodesCount(100000)
-    }
+  const onNodeFilterSelect = (value) => {
+    setCurrentFilter(value)
   }
 
   const handleFindApiResponse = (data) => {
     if(data && data.items){
-      const { parsedData, filterData } = transformGraphData(data, nodesCount)
+      const { parsedData, filterData } = transformGraphData(data)
       setFilterCriteria(filterData)
       setGraphData(parsedData)
+      setFilteredData(null)
     }
     setIsLoading(false)
   }
@@ -80,13 +77,26 @@ function App() {
   }
 
   useEffect(() => {
-    if(nodesCount < graphData.nodes.length) {
-      const newGraphData = {nodes: [], links: []}
-      newGraphData.links = graphData.links.filter((_, i) => i < nodesCount)
-      newGraphData.nodes = graphData.nodes.filter((_, i) => i <= nodesCount)
-      setGraphData(newGraphData)
+    if(graphData.nodes.length > 0 && currentFilter && currentFilter !== 'No filter') {
+      const filteredLinks = graphData.links.filter(el => {
+        if(el.type) {
+          return el.type.includes(currentFilter)
+        } 
+        return true
+      })
+      const filteredNodes = graphData.nodes.filter(el => {
+        if(el.type) {
+          return el.type.includes(currentFilter)
+        }
+        return true
+      })
+      setFilteredData({links: filteredLinks, nodes: filteredNodes})
     }
-  }, [nodesCount])
+    if(currentFilter === 'No filter') {
+      setFilteredData(null)
+    }
+
+  }, [currentFilter])
 
   return (
     <div className="App">
@@ -95,9 +105,10 @@ function App() {
       {(isLoading || graphData.nodes.length === 0) && <EmptyDataScreen loading={isLoading} /> }
       {!isLoading && graphData.nodes.length > 0 && <div style={{ display: 'flex' }}>
         <RelationalGraph
-          data={graphData}
+          data={filteredData ? filteredData : graphData}
           config={graphConfig}
-          onNodeCountSelect={onNodeCountSelect}
+          filters={filterCriteria}
+          onNodeFilterSelect={onNodeFilterSelect}
           onClickNode={onClickNode}
           />
       </div>}

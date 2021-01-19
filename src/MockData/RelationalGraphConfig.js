@@ -2,7 +2,7 @@ const myConfig = {
     "automaticRearrangeAfterDropNode": true,
     "collapsible": true,
     "directed": true,
-    "focusAnimationDuration": 0.5,
+    "focusAnimationDuration": 0.25,
     "focusZoom": 1,
     "freezeAllDragEvents": false,
     "height": 550,
@@ -19,7 +19,7 @@ const myConfig = {
     "d3": {
       "alphaTarget": 0.05,
       "gravity": -500,
-      "linkLength": 120,
+      "linkLength": 140,
       "linkStrength": 2,
       "disableLinkForce": false
     },

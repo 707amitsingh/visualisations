@@ -4,7 +4,7 @@ import Toolbar from '../Toolbar/Toolbar'
 import './RelationalGraph.css'
 
 
-const RelationalGraph = ({ data, config, onNodeCountSelect, onClickNode }) => {
+const RelationalGraph = ({ data, config, filters, onNodeFilterSelect, onClickNode }) => {
 
     const [gravity, setGravity] = useState(-250)
     const [dotSize, setDotSize] = useState(300)
@@ -59,10 +59,11 @@ const RelationalGraph = ({ data, config, onNodeCountSelect, onClickNode }) => {
                 onClickLink={onClickLink}
             />
             <Toolbar
+            filters={filters}
             setGravity={handleGravityChange}
             setDotSize={handleDotSizeChange}
             setFontSize={handleFontSizeChange}
-            onNodeCountSelect={onNodeCountSelect}
+            onNodeFilterSelect={onNodeFilterSelect}
             size={windowSize*(0.15)}
             />
         </div>
