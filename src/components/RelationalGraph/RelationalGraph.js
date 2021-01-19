@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { Graph } from "react-d3-graph";
-import data2 from '../../MockData/mockData2'
 import './RelationalGraph.css'
 
 
 const RelationalGraph = ({ data, config }) => {
 
-    const [gravity, setGravity] = useState(-350)
-    const [dotSize, setDotSize] = useState(600)
+    const [gravity, setGravity] = useState(-250)
+    const [dotSize, setDotSize] = useState(300)
     const [fontSize, setFontSize] = useState(12)
-    const [changeData, setChnageData] = useState(false)
     const [windowSize, setWindowSize] = useState(window.innerWidth)
 
     const onClickNode = function (nodeId) {
@@ -25,10 +23,6 @@ const RelationalGraph = ({ data, config }) => {
         setWindowSize(window.innerWidth)
     }
 
-    const handleChangeData = () => {
-        setChnageData(changeData => !changeData)
-    }
-
     useEffect(() => {
         window.addEventListener('resize', handleResize)
         return _ => {
@@ -37,42 +31,43 @@ const RelationalGraph = ({ data, config }) => {
     }, [windowSize])
 
     config["d3"]["gravity"] = gravity
-    config["width"] = windowSize - 20
+    config["width"] = windowSize*(0.85) - 10
     config["node"]["size"] = dotSize
     config["node"]["fontSize"] = fontSize
 
     return (
-        <div className="">
+        <div className="graphDashboard">
             <Graph
                 id="graph-id" // id is mandatory
-                data={changeData ? data2 : data}
+                data={data}
                 config={config}
                 onClickNode={onClickNode}
                 onClickLink={onClickLink}
             />
-            <div className="relationalGraphToolbar">
-                <div className="toolbarButtons">
-                    <span className="mr-sm-2">Zoom</span>
-                    <ButtonGroup className="mr-sm-4">
+            <div className="relationalGraphToolbar" style={{width: windowSize*(0.15)}}>
+                <div className="toolbarButtonContainer">
+                    <div className="">
+                    <p className="mr-sm-2">Zoom</p>
+                    <ButtonGroup className="mb-sm-4">
                         <Button variant="info" onClick={() => setGravity(gravity - 50)}>+</Button>
                         <Button variant="dark" onClick={() => setGravity(gravity + 50)}>-</Button>
                     </ButtonGroup>
-
-                    <span className="mr-sm-2">Dot Size</span>
-                    <ButtonGroup className="mr-sm-4">
+                    </div>
+                    <div className="">
+                    <p className="mr-sm-2">Dot Size</p>
+                    <ButtonGroup className="mb-sm-4">
                         <Button variant="info" onClick={() => setDotSize(dotSize + 100)}>+</Button>
                         <Button variant="dark" onClick={() => setDotSize(dotSize - 100)}>-</Button>
                     </ButtonGroup>
-
-                    <span className="mr-sm-2">Font Size</span>
-                    <ButtonGroup className="mr-sm-4">
+                    </div>
+                    <div className="">
+                    <p className="mr-sm-2">Font Size</p>
+                    <ButtonGroup className="mb-sm-4">
                         <Button variant="info" onClick={() => setFontSize(fontSize + 2)}>+</Button>
                         <Button variant="dark" onClick={() => setFontSize(fontSize - 2)}>-</Button>
                     </ButtonGroup>
+                    </div>
                 </div>
-                <Button variant="outline-info" onClick={handleChangeData}>
-                    Change data(temp)
-                </Button>
             </div>
         </div>
 

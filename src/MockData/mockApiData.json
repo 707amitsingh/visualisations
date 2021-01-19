@@ -1,0 +1,37 @@
+{
+    "name": "GF_L02_CAM17",
+    "type": "iot.SpatialElement",
+    "id": "Y3VzdG9tZXIuU2VjdXJpdHlab25l-aW90LlNwYXRpYWxFbGVtZW50-c29tLmd1aWQ=-Y3VzdG9tZXIuaTJmMzU3NzkyLTRiODYtNDM4Zi04Yzc5LThhZTg1ZDZhNjJiYg==",
+    "customerId": "idf0a29149-660a-4493-bba1-f3ffa4388078",
+    "relationships": [
+        {
+            "id": "iot.SUPPLIES_SPATIAL_ELEMENT",
+            "name": "iot.SUPPLIES_SPATIAL_ELEMENT",
+            "direction": "IN",
+            "relationshipEntityList": [
+                {
+                    "name": "1011",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaWNlNDAyZjllLWViMzctNGVjMi05N2JjLWI2NTY5OTk4NmY0ZQ=="
+                },
+                {
+                    "name": "1012",
+                    "type": "iot.Asset",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaTIwNjhkN2Q1LTAxMjMtNGFiYy04OTg2LWIzZDNhYTg2NmU3MQ=="
+                }
+            ]
+        },
+        {
+            "id": "iot.IS_CONTAINED_BY_SPATIAL_ELEMENT",
+            "name": "iot.IS_CONTAINED_BY_SPATIAL_ELEMENT",
+            "direction": "OUT",
+            "relationshipEntityList": [
+                {
+                    "name": "sTGqccentre01_OBS2019.2.1.3",
+                    "type": "iot.SpatialElement",
+                    "id": "aW90Lk9iamVjdA==-c29tLmd1aWQ=-Y3VzdG9tZXIuaTUzYWI3NzMyLWY1ZTktNDM0Mi05M2JlLTUwNjkyY2UyZWRlMQ=="
+                }
+            ]
+        }
+    ]
+}

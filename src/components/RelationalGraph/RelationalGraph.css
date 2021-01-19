@@ -1,6 +1,20 @@
 .relationalGraphToolbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     background-color: #efefef;
     padding: 20px;
+}
+
+.toolbarButtonContainer {
+    flex-grow: 1;
+}
+.toolbarButtons{
+    display: flex;
+    align-items: center;
+}
+
+.graphDashboard {
+    display: flex;
+    margin-top: -16px
 }
