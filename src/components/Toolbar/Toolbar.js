@@ -8,7 +8,6 @@ const Toolbar = ({ setGravity, setDotSize, setFontSize, onNodeCountSelect, size 
         setNodesCount(+value ? +value : 'all')
         onNodeCountSelect(+value)
     }
-    console.log('>>>>>>>> STATE: ', +nodesCount)
     return <div className="relationalGraphToolbar" style={{ width: size }}>
         <div className="toolbarButtonContainer">
             <p className="mr-sm-2">Number of Nodes</p>
