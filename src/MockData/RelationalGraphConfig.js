@@ -5,7 +5,7 @@ const myConfig = {
     "focusAnimationDuration": 0.5,
     "focusZoom": 1,
     "freezeAllDragEvents": false,
-    "height": 600,
+    "height": 550,
     "highlightDegree": 2,
     "highlightOpacity": 0.2,
     "linkHighlightBehavior": true,
@@ -24,7 +24,7 @@ const myConfig = {
       "disableLinkForce": false
     },
     "node": {
-      "color": "#48a9a6",
+      "color": "#084B83",
       "fontColor": "black",
       "fontSize": 10,
       "fontWeight": "normal",
