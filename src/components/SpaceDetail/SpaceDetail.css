@@ -8,6 +8,7 @@
     border: none;
     margin: 8px 0 0px;
     transition: all .3s ease-in-out;
+    min-height: 185px;
 }
 .l-bg-green {
     background: linear-gradient(135deg,#23bdb8,#43e794)!important;
@@ -18,4 +19,7 @@
 }
 .m-b-20 {
     margin-bottom: 20px;
+}
+.m-r-5 {
+    margin-right: 5px;;
 }
