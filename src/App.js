@@ -23,36 +23,42 @@ function App({ history }) {
   const [isLoading, setIsLoading] = useState(false)
   const [filterCriteria, setFilterCriteria] = useState([])
   const [path, setPath] = useState('/')
-
+  const [searchString, setSearchString] = useState("")
   // const history = useHistory()
 
   const handleSearchSubmit = (queryType, searchValue) => {
+    
     if (queryType && searchValue) {
-      const config = {
-        resource: "hierarchy",
-        page: {
-          "pageSize": 1500,
-          "page": 1
-        },
-        q: {
-          op: "and",
-          criteria: [
-            {
-              op: "eq",
-              field: "type",
-              value: queryType === "asset" ? "iot.Asset" : 'iot.SpatialElement'
-            },
-            {
-              op: "eq",
-              field: "name",
-              value: searchValue
-            }
-          ]
+      if (path === '/') {
+        const config = {
+          resource: "hierarchy",
+          page: {
+            "pageSize": 1500,
+            "page": 1
+          },
+          q: {
+            op: "and",
+            criteria: [
+              {
+                op: "eq",
+                field: "type",
+                value: queryType === "asset" ? "iot.Asset" : 'iot.SpatialElement'
+              },
+              {
+                op: "eq",
+                field: "name",
+                value: searchValue
+              }
+            ]
+          }
         }
+        getNodes(config, handleFindApiResponse)
+        setCurrentFilter(null)
+        setIsLoading(true)
+
+      } else {
+        setSearchString(searchValue)
       }
-      getNodes(config, handleFindApiResponse)
-      setCurrentFilter(null)
-      setIsLoading(true)
     }
   }
 
@@ -127,15 +133,15 @@ function App({ history }) {
       {/* <Breadcrum /> */}
       {(isLoading || graphData.nodes.length === 0) && path === '/' && <EmptyDataScreen loading={isLoading} />}
       {!isLoading && graphData.nodes.length > 0 && <div style={{ display: 'flex' }}>
-            {path === '/' && <RelationalGraph
-              data={filteredData ? filteredData : graphData}
-              config={graphConfig}
-              filters={filterCriteria}
-              onNodeFilterSelect={onNodeFilterSelect}
-              onClickNode={onClickNode}
-            />} 
+        {path === '/' && <RelationalGraph
+          data={filteredData ? filteredData : graphData}
+          config={graphConfig}
+          filters={filterCriteria}
+          onNodeFilterSelect={onNodeFilterSelect}
+          onClickNode={onClickNode}
+        />}
       </div>}
-      {path !== '/' && <div>Hello, world</div>}
+      {path !== '/' && <SpaceDetail data={spaceData} spaceName={searchString}></SpaceDetail>}
     </div>
   );
 }
