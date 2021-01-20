@@ -4,7 +4,7 @@ const data = [
         "questions": [
             {
                 "id":1,
-                "question": "What is the temperature point name in Room1",
+                "question": "What is the temperature point name in Room1", // What is the temperature point name in Room1
                 "value": "",
                 "searchString": ""
             },
@@ -16,7 +16,7 @@ const data = [
             },
             {
                 "id":3,
-                "question": "Which AHU1 is serving colled Air to VAV1",
+                "question": "Which AHU is serving colled Air to VAV1",
                 "value": "",
                 "searchString": ""
             },
