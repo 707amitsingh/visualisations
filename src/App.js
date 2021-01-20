@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <Header onSubmit={handleSearchSubmit} />
-      <Breadcrum />
+      {/* <Breadcrum /> */}
       <div style={{ display: 'flex' }}>
         <SpaceDetail  data={spaceData}></SpaceDetail>
         {/* <RelationalGraph data={graphData} config={graphConfig} onNodeCountSelect={onNodeCountSelect} /> */}

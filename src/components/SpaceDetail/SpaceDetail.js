@@ -18,18 +18,18 @@ const SpaceDetail = ({ data }) => {
 
     return (
         <div>
-            <Container>
+            <Container><br />
                 <Row>
                     {data[0]["questions"].map(elem => (
-                        <Col sm={4}>
-                            {' '}<Card>
+                        <Col sm={4} >
+                            {' '}<Card >
                                 <Card.Body>
                                     <blockquote className="blockquote mb-0">
                                         <p>
                                             {elem.question}
                                         </p>
                                         <footer >
-                                            <Badge variant="primary">Someone value</Badge>
+                                            <Badge variant="primary">-- value</Badge>
                                         </footer>
                                     </blockquote>
                                 </Card.Body>
