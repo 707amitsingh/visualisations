@@ -4,17 +4,13 @@ import Toolbar from '../Toolbar/Toolbar'
 import './RelationalGraph.css'
 
 
-const RelationalGraph = ({ data, config, onNodeCountSelect }) => {
+const RelationalGraph = ({ data, config, filters, onNodeFilterSelect, onClickNode }) => {
 
     const [gravity, setGravity] = useState(-250)
     const [dotSize, setDotSize] = useState(300)
     const [fontSize, setFontSize] = useState(12)
     const [windowSize, setWindowSize] = useState(window.innerWidth)
-
-    const onClickNode = function (nodeId) {
-        window.alert(`Clicked node ${nodeId}`);
-    };
-
+    
     const onClickLink = function (source, target) {
         window.alert(`Clicked link between ${source} and ${target}`);
     };
@@ -63,10 +59,11 @@ const RelationalGraph = ({ data, config, onNodeCountSelect }) => {
                 onClickLink={onClickLink}
             />
             <Toolbar
+            filters={filters}
             setGravity={handleGravityChange}
             setDotSize={handleDotSizeChange}
             setFontSize={handleFontSizeChange}
-            onNodeCountSelect={onNodeCountSelect}
+            onNodeFilterSelect={onNodeFilterSelect}
             size={windowSize*(0.15)}
             />
         </div>

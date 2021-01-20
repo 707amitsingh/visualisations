@@ -2,10 +2,10 @@ const myConfig = {
     "automaticRearrangeAfterDropNode": true,
     "collapsible": true,
     "directed": true,
-    "focusAnimationDuration": 0.5,
+    "focusAnimationDuration": 0.25,
     "focusZoom": 1,
     "freezeAllDragEvents": false,
-    "height": 600,
+    "height": 550,
     "highlightDegree": 2,
     "highlightOpacity": 0.2,
     "linkHighlightBehavior": true,
@@ -19,12 +19,12 @@ const myConfig = {
     "d3": {
       "alphaTarget": 0.05,
       "gravity": -500,
-      "linkLength": 120,
+      "linkLength": 140,
       "linkStrength": 2,
       "disableLinkForce": false
     },
     "node": {
-      "color": "#48a9a6",
+      "color": "#084B83",
       "fontColor": "black",
       "fontSize": 10,
       "fontWeight": "normal",
