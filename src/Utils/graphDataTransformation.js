@@ -75,8 +75,8 @@ export const filterMapping = {
     "IN-SUPPLIES_SPATIAL_ELEMENT": 'Supplied By Asset',
     "OUT-IS_LOCATED_IN": 'Installed Location',
     "IN-IS_LOCATED_IN": 'Installed Asset',
-    "OUT-SUPPLIES_ASSET": 'Provides To Asset',
-    "IN-SUPPLIES_ASSET": 'Provided By Asset'
+    "OUT-SUPPLIES_ASSET": 'Serves Asset',
+    "IN-SUPPLIES_ASSET": 'Served By Asset'
 }
 
 

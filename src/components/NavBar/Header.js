@@ -18,8 +18,8 @@ const Header = ({ onSubmit, handleNavigation }) => {
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="#home">Honeywell</Navbar.Brand>
       <Nav className="mr-auto">
-        <Button variant="secondary" className="mr-sm-2" onClick={() => handleNavigation('/')}>Graph</Button>
-        <Button variant="secondary" onClick={() => handleNavigation('/ques')}>Questions</Button>
+        <Button variant="secondary" className="mr-sm-2" onClick={() => handleNavigation('/')}>Eagle eye</Button>
+        <Button variant="secondary" onClick={() => handleNavigation('/ques')}>Playbook</Button>
       </Nav>
       <Form inline>
         <DropdownButton className="mr-sm-2" id="dropdown-basic-button" title={queryType ? `${queryType.toUpperCase()}` : "Query Type"} variant="info" onSelect={(value) => setQueryType(value)} >
