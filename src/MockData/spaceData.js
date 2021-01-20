@@ -10,7 +10,7 @@ const data = [
             },
             {
                 "id":2,
-                "question": "Which VAV is serving Air to Room1 (Check for Damper position value )",
+                "question": "Which VAV is serving Air to Room1",
                 "value": "",
                 "searchString": ""
             },

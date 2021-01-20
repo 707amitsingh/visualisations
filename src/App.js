@@ -110,13 +110,13 @@ function App() {
   return (
     <div className="App">
       <Header onSubmit={handleSearchSubmit} />
-      {/* <Breadcrum /> */}
+      <Breadcrum />
+      <SpaceDetail data={spaceData}></SpaceDetail>
       {(isLoading || graphData.nodes.length === 0) && <EmptyDataScreen loading={isLoading} />}
       {!isLoading && graphData.nodes.length > 0 && <div style={{ display: 'flex' }}>
         <Route>
           <Switch>
             <Route path="/ques">
-              <SpaceDetail data={spaceData}></SpaceDetail>
             </Route>
             <Route path="/">
               <RelationalGraph
