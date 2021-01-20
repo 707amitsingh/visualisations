@@ -12,6 +12,8 @@ import transformGraphData, { filterMapping } from './Utils/graphDataTransformati
 import { getNodes } from './Utils/findApiHelper'
 import { useEffect, useState } from 'react';
 import EmptyDataScreen from './components/EmptyDataScreen/EmptyDataScreen'
+import SpaceDetail from './components/SpaceDetail/SpaceDetail'
+import spaceData from './MockData/spaceData';
 
 function App({ history }) {
 
