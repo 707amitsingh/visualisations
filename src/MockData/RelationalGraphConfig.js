@@ -5,7 +5,7 @@ const myConfig = {
     "focusAnimationDuration": 0.25,
     "focusZoom": 1,
     "freezeAllDragEvents": false,
-    "height": 550,
+    "height": 600,
     "highlightDegree": 2,
     "highlightOpacity": 0.2,
     "linkHighlightBehavior": true,

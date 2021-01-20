@@ -10,7 +10,7 @@ const Toolbar = ({ filters, setGravity, setDotSize, setFontSize, onNodeFilterSel
     }
     return <div className="relationalGraphToolbar" style={{ width: size }}>
         <div className="toolbarButtonContainer">
-            <p>Type Filter</p>
+            <p>Filter type</p>
             <DropdownButton className="mb-sm-4" id="dropdown-basic-button" title={currentFilter ? currentFilter : "Filter "} variant="primary" onSelect={handleNodeCountSelect} >
                 {[...filters.map((filter, i) => <div key={filter}>
                     <Dropdown.Item eventKey={filter}>{filter}</Dropdown.Item>

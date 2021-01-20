@@ -45,7 +45,7 @@ const RelationalGraph = ({ data, config, filters, onNodeFilterSelect, onClickNod
     }, [windowSize])
 
     config["d3"]["gravity"] = gravity
-    config["width"] = windowSize*(0.85) - 20
+    config["width"] = windowSize*(0.85)
     config["node"]["size"] = dotSize
     config["node"]["fontSize"] = fontSize
 
