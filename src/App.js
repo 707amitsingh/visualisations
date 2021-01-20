@@ -12,7 +12,7 @@ import transformGraphData from './Utils/graphDataTransformation';
 import { getNodes } from './Utils/findApiHelper'
 import { useEffect, useState } from 'react';
 import EmptyDataScreen from './components/EmptyDataScreen/EmptyDataScreen'
-import SpaceDetail  from './components/SpaceDetail/SpaceDetail'
+import SpaceDetail from './components/SpaceDetail/SpaceDetail'
 import spaceData from './MockData/spaceData';
 
 function App() {
@@ -111,13 +111,12 @@ function App() {
     <div className="App">
       <Header onSubmit={handleSearchSubmit} />
       {/* <Breadcrum /> */}
-      <SpaceDetail  data={spaceData}></SpaceDetail>
-      {(isLoading || graphData.nodes.length === 0) && <EmptyDataScreen loading={isLoading} /> }
+      {(isLoading || graphData.nodes.length === 0) && <EmptyDataScreen loading={isLoading} />}
       {!isLoading && graphData.nodes.length > 0 && <div style={{ display: 'flex' }}>
         <Route>
           <Switch>
-            <Route exact path="/ques">
-              <div>Hello, world</div>
+            <Route path="/ques">
+              <SpaceDetail data={spaceData}></SpaceDetail>
             </Route>
             <Route path="/">
               <RelationalGraph

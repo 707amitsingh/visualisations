@@ -6,7 +6,9 @@ import { getNodes } from '../../Utils/findApiHelper';
 
 const SpaceDetail = ({ data }) => {
 
-    let apiRes1, apiRes2, apiRes3, apiRes4;
+    const [apiRes1, setApiRes1] = useState()
+    const [apiRes2, setApiRes2] = useState()
+    const [apiRes3, setApiRes3] = useState()
     const [windowSize, setWindowSize] = useState(window.innerWidth)
     const handleResize = () => {
         setWindowSize(window.innerWidth)
@@ -70,11 +72,11 @@ const SpaceDetail = ({ data }) => {
 
     useEffect(() => {
         window.addEventListener('resize', handleResize)
-        
+
         return _ => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [windowSize, data])
+    }, [windowSize])
 
     const getCard1Data = () => {
         getNodes(config1, handleCard1Response);
@@ -83,16 +85,15 @@ const SpaceDetail = ({ data }) => {
     const getCard1Api2Data = () => {
         getNodes(config2, handleCard2Response);
     }
-    
+
     const handleCard1Response = (res) => {
-        apiRes1 = res;
+        setApiRes1(res);
         getCard1Api2Data();
     }
 
     const handleCard2Response = (res) => {
-        apiRes2 = res;
-        debugger;
         data[0]["questions"][0].value = res.items[0].points.find(x => x.role == "Supply Air Temperature Setpoint").name
+        setApiRes2(res);
     }
 
     const getCardIcon = (room) => {
@@ -105,30 +106,24 @@ const SpaceDetail = ({ data }) => {
         }
         return (<Forward></Forward>);
     }
+    useEffect(() => {
+        getCard1Data()
+    }, [])
 
-    getCard1Data()
     return (
         <div>
             <Container><br />
                 <Row>
-                    {data[0]["questions"].map((elem, index) => (
+                    {data[0]["questions"].filter(x => x.value !== "").map((elem, index) => (
                         <Col sm={4} key={index}>
                             <Card className="info-box l-bg-green order-info-box">
                                 <Card.Body className="info-box-block">
                                     <h5 className="m-b-20">{elem.question}</h5>
-                                    <h3 className="text-left">
+                                    <h6 className="text-left">
                                         <i className="m-r-5">
                                             {getCardIcon(elem)}
                                         </i><span >{elem.value}</span>
-                                    </h3>
-                                    {/* <blockquote className="blockquote mb-0">
-                                        <p>
-                                            {elem.question}
-                                        </p>
-                                        <footer >
-                                            <Badge variant="primary">-- value</Badge>
-                                        </footer>
-                                    </blockquote> */}
+                                    </h6>
                                 </Card.Body>
                             </Card>
                         </Col>
