@@ -1,25 +1,28 @@
 import './App.css';
-import {
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom'
+// import {
+//   Switch,
+//   Route,
+//   withRouter
+// } from 'react-router-dom'
 import graphConfig from './MockData/RelationalGraphConfig';
 import Header from './components/NavBar/Header'
 import RelationalGraph from './components/RelationalGraph/RelationalGraph'
 import Breadcrum from './components/BreadCrum/Breadcrum';
-import transformGraphData from './Utils/graphDataTransformation';
+import transformGraphData, { filterMapping } from './Utils/graphDataTransformation';
 import { getNodes } from './Utils/findApiHelper'
 import { useEffect, useState } from 'react';
 import EmptyDataScreen from './components/EmptyDataScreen/EmptyDataScreen'
 
-function App() {
+function App({ history }) {
 
   const [currentFilter, setCurrentFilter] = useState(10000);
   const [graphData, setGraphData] = useState({ nodes: [], links: [] })
   const [filteredData, setFilteredData] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [filterCriteria, setFilterCriteria] = useState([])
+  const [path, setPath] = useState('/')
+
+  // const history = useHistory()
 
   const handleSearchSubmit = (queryType, searchValue) => {
     if (queryType && searchValue) {
@@ -65,6 +68,11 @@ function App() {
     setIsLoading(false)
   }
 
+  const handleNavigation = (path) => {
+    console.log('>>>>>>>>>>>>> PATH', path)
+    setPath(path)
+  }
+
   const onClickNode = (source, target) => {
     const config = {
       resource: "hierarchy",
@@ -79,21 +87,28 @@ function App() {
       }
     }
     getNodes(config, handleFindApiResponse)
+    setCurrentFilter(null)
     setIsLoading(true)
   }
 
   useEffect(() => {
     if (graphData.nodes.length > 0 && currentFilter && currentFilter !== 'No filter') {
+      let mappedObjectKey = ''
+      for (let key in filterMapping) {
+        if (currentFilter === filterMapping[key]) {
+          mappedObjectKey = key
+        }
+      }
+      const [direction, type] = mappedObjectKey.split('-')
       const filteredLinks = graphData.links.filter(el => {
-        if (el.type) {
-          return el.type.includes(currentFilter)
+        if (el.type && el.directed) {
+          return el.type.includes(type) && el.directed === direction
         }
         return true
       })
       const filteredNodes = graphData.nodes.filter(el => {
-        if (el.type) {
-
-          return el.type.includes(currentFilter)
+        if (el.type && el.directed) {
+          return el.type.includes(type) && el.directed === direction
         }
         return true
       })
@@ -104,32 +119,23 @@ function App() {
     }
   }, [currentFilter])
 
-  console.log('>>>>>>>>>>>>>> Filter Data: ', filterCriteria)
   return (
     <div className="App">
-      <Header onSubmit={handleSearchSubmit} />
-      <Breadcrum />
-      {(isLoading || graphData.nodes.length === 0) && <EmptyDataScreen loading={isLoading} />}
+      <Header onSubmit={handleSearchSubmit} handleNavigation={handleNavigation} />
+      {/* <Breadcrum /> */}
+      {(isLoading || graphData.nodes.length === 0) && path === '/' && <EmptyDataScreen loading={isLoading} />}
       {!isLoading && graphData.nodes.length > 0 && <div style={{ display: 'flex' }}>
-        <Route>
-          <Switch>
-            <Route exact path="/ques">
-              <div>Hello, world</div>
-            </Route>
-            <Route path="/">
-              <RelationalGraph
-                data={filteredData ? filteredData : graphData}
-                config={graphConfig}
-                filters={filterCriteria}
-                onNodeFilterSelect={onNodeFilterSelect}
-                onClickNode={onClickNode}
-              />
-            </Route>
-          </Switch>
-        </Route>
+            {path === '/' && <RelationalGraph
+              data={filteredData ? filteredData : graphData}
+              config={graphConfig}
+              filters={filterCriteria}
+              onNodeFilterSelect={onNodeFilterSelect}
+              onClickNode={onClickNode}
+            />} 
       </div>}
+      {path !== '/' && <div>Hello, world</div>}
     </div>
   );
 }
 
-export default App;
+export default App
