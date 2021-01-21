@@ -208,15 +208,14 @@ const SpaceDetail = ({ data, spaceName }) => {
     }
 
     const getApi3Data = (res) => {
-        const _data = res.items[0].points.find(x => x.role == "Supply Air Temperature Setpoint")
-        data[0]["questions"][2].question = `Which AHU is serving colled Air to ${_data.name}`;
+        const _data = res.items[0]
+        data[0]["questions"][2].question = `Which AHU is serving cooled Air to ${_data.name}`;
         getNodes(config3, handleApi3Response);
     }
 
     const getApi4Data = (res) => {
         const _data = res.items[0].relationships.find(x => x.direction === "IN" && x.name === "iot.SUPPLIES_SPATIAL_ELEMENT").relationshipEntityList.find(x => x.assetType === "Variable Air Volume");
         config4.q.criteria.find(x => x.field == "relationships.relationshipEntityList.id").value = _data.id
-        data[0]["questions"][5].question = `Which chiller is serving ${_data.name}`;
         getNodes(config4, handleApi4Response);
     }
 
@@ -247,6 +246,7 @@ const SpaceDetail = ({ data, spaceName }) => {
     }
 
     const handleApi4Response = (res) => {
+        data[0]["questions"][5].question = `Which chiller is serving ${res.items[0].name}`;
         data[0]["questions"][2].value = res.items[0].name
         setApiRes4(res);
         getApi5Data(res);
