@@ -21,11 +21,9 @@ const EmptyDataScreen = ({ loading }) => {
         }
         return <Card style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Title>Search</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Hierarchy</Card.Subtitle>
                 <Card.Text>
-                   Some placeholder text. Replace it with something interesting
-            </Card.Text>
+                    Endless Delve
+                </Card.Text>
             </Card.Body>
         </Card>
     }

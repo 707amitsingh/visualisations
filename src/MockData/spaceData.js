@@ -16,7 +16,7 @@ const data = [
             },
             {
                 "id":3,
-                "question": "Which AHU is serving colled Air to VAV1",
+                "question": "Which AHU is serving cooled Air to VAV1",
                 "value": "",
                 "searchString": ""
             },
