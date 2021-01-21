@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Form, Button, FormControl, DropdownButton, Dropdown } from 'react-bootstrap';
+import logo from '../../Assets/Honewell_logo.png'
 
 const Header = ({ onSubmit, handleNavigation }) => {
 
@@ -16,7 +17,7 @@ const Header = ({ onSubmit, handleNavigation }) => {
 
   return <>
     <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home">Honeywell</Navbar.Brand>
+      <div style={{width: '100px'}} className="mr-sm-2"><img src={logo}  style={{width: '100%'}}/></div>
       <Nav className="mr-auto">
         <Button variant="secondary" className="mr-sm-2" onClick={() => handleNavigation('/')}>Eagle eye</Button>
         <Button variant="secondary" onClick={() => handleNavigation('/ques')}>Playbook</Button>
