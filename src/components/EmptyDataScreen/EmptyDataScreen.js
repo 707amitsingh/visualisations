@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Spinner } from 'react-bootstrap';
+import logo from '../../Assets/bg.jpg'
 import './EmptyDataScreen.css'
 
 const EmptyDataScreen = ({ loading }) => {
@@ -19,14 +20,12 @@ const EmptyDataScreen = ({ loading }) => {
                 </Card.Body>
             </Card>
         }
-        return <div></div>
-        // <Card style={{ width: '18rem' }}>
-        //     <Card.Body>
-        //         <Card.Text>
-        //             Endless Delve
-        //         </Card.Text>
-        //     </Card.Body>
-        // </Card>
+        return <div className="backgroundMessage">
+            {/* <img src={logo} style={{width: '100vw', height: '102vh'}}/> */}
+            <div className="tagLineContainer">
+                <p className="bGtagline"><span className="bGtaglineSection">THE FUTURE</span> IS WHAT WE MAKE IT</p>
+            </div>
+        </div>
     }
 
     return <div className="emptyDataScreen">
