@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './SpaceDetail.css';
-import { Card, Container, Row, Col, Badge } from 'react-bootstrap';
-import { House, Bricks, Thermometer, Soundwave, Forward } from 'react-bootstrap-icons';
+import { Card, Container, Row, Col } from 'react-bootstrap';
+import { House, Thermometer, Soundwave, Forward } from 'react-bootstrap-icons';
 import { getNodes } from '../../Utils/findApiHelper';
 
-const SpaceDetail = ({ data }) => {
-
+const SpaceDetail = ({ data, spaceName }) => {
     const [apiRes1, setApiRes1] = useState()
     const [apiRes2, setApiRes2] = useState()
     const [apiRes3, setApiRes3] = useState()
     const [apiRes4, setApiRes4] = useState()
     const [apiRes5, setApiRes5] = useState()
     const [windowSize, setWindowSize] = useState(window.innerWidth)
+    const [cardValues, setCardValues] = useState()
     const handleResize = () => {
         setWindowSize(window.innerWidth)
     }
@@ -33,7 +33,7 @@ const SpaceDetail = ({ data }) => {
                 {
                     op: "eq",
                     field: "name",
-                    value: "GF_L02_CAM16"
+                    value: spaceName
                 }
             ]
         }
@@ -89,7 +89,7 @@ const SpaceDetail = ({ data }) => {
                 {
                     op: "eq",
                     field: "name",
-                    value: "GF_L02_CAM16"
+                    value: spaceName
                 },
                 {
                     op: "eq",
@@ -189,30 +189,48 @@ const SpaceDetail = ({ data }) => {
         }
     }, [windowSize])
 
+    const resetValue = () => {
+        data[0]["questions"][0].value = "";
+        data[0]["questions"][1].value = "";
+        data[0]["questions"][2].value = "";
+        data[0]["questions"][5].value = "";
+        setCardValues(data);
+    }
     const getCard1Data = () => {
+        data[0]["questions"][0].question = `What is the temperature point name in ${spaceName} `;
+        data[0]["questions"][1].question = `Which VAV is serving Air to ${spaceName}`;
         getNodes(config1, handleCard1Response);
     }
 
-    const getCard1Api2Data = (res) => {debugger;
+    const getCard1Api2Data = (res) => {
         config2.q.criteria.find(x => x.field == "relationships.relationshipEntityList.id").value = res.items[0].id;
         getNodes(config2, handleApi2Response);
     }
 
     const getApi3Data = (res) => {
+        const _data = res.items[0]
+        data[0]["questions"][2].question = `Which AHU is serving cooled Air to ${_data.name}`;
         getNodes(config3, handleApi3Response);
     }
 
     const getApi4Data = (res) => {
+        const _data = res.items[0].relationships.find(x => x.direction === "IN" && x.name === "iot.SUPPLIES_SPATIAL_ELEMENT").relationshipEntityList.find(x => x.assetType === "Variable Air Volume");
+        config4.q.criteria.find(x => x.field == "relationships.relationshipEntityList.id").value = _data.id
         getNodes(config4, handleApi4Response);
     }
 
     const getApi5Data = (res) => {
+        config5.q.criteria.find(x => x.field == "relationships.relationshipEntityList.id").value = res.items[0].id
         getNodes(config5, handleApi5Response);
     }
-    
+
     const handleCard1Response = (res) => {
-        setApiRes1(res);
-        getCard1Api2Data(res);
+        if (res.items[0]) {
+            setApiRes1(res);
+            getCard1Api2Data(res);
+        } else {
+            resetValue();
+        }
     }
 
     const handleApi2Response = (res) => {
@@ -222,19 +240,20 @@ const SpaceDetail = ({ data }) => {
     }
 
     const handleApi3Response = (res) => {
-        data[0]["questions"][1].value = res.items[0].relationships.find( x=> x.name == "iot.SUPPLIES_SPATIAL_ELEMENT").relationshipEntityList.find(x => x.assetType == "Variable Air Volume").name
+        data[0]["questions"][1].value = res.items[0].relationships.find(x => x.name == "iot.SUPPLIES_SPATIAL_ELEMENT").relationshipEntityList.find(x => x.assetType == "Variable Air Volume").name
         setApiRes3(res);
         getApi4Data(res);
     }
 
     const handleApi4Response = (res) => {
+        data[0]["questions"][5].question = `Which chiller is serving ${res.items[0].name}`;
         data[0]["questions"][2].value = res.items[0].name
         setApiRes4(res);
         getApi5Data(res);
     }
 
     const handleApi5Response = (res) => {
-        data[0]["questions"][3].value = res.items[0].name
+        data[0]["questions"][5].value = res.items[0].name
         setApiRes5(res);
     }
 
@@ -249,8 +268,12 @@ const SpaceDetail = ({ data }) => {
         return (<Forward></Forward>);
     }
     useEffect(() => {
-        getCard1Data()
-    }, [])
+        if (spaceName) {
+            resetValue();
+            getCard1Data()
+        }
+    }, [spaceName])
+
 
     return (
         <div>
