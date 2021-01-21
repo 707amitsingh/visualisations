@@ -19,13 +19,14 @@ const EmptyDataScreen = ({ loading }) => {
                 </Card.Body>
             </Card>
         }
-        return <Card style={{ width: '18rem' }}>
-            <Card.Body>
-                <Card.Text>
-                    Endless Delve
-                </Card.Text>
-            </Card.Body>
-        </Card>
+        return <div></div>
+        // <Card style={{ width: '18rem' }}>
+        //     <Card.Body>
+        //         <Card.Text>
+        //             Endless Delve
+        //         </Card.Text>
+        //     </Card.Body>
+        // </Card>
     }
 
     return <div className="emptyDataScreen">
